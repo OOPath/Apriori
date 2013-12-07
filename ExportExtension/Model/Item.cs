@@ -20,6 +20,7 @@ namespace ExportExtension.Model
 		public MongoDB.Bson.ObjectId ObjectId { get; set; }
 		public int MinimumSupport { get; set; }
 		public int TransactionSupport { get; set; }
+		public string TransactionId { get; set; }
 		public string Data { get; set; }
 		public Item Parent { get; set; }
 	}

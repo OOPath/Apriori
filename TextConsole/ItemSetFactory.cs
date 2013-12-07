@@ -12,6 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ExportExtension.Model;
 
 namespace TextConsole
 {
@@ -29,28 +30,19 @@ namespace TextConsole
 		/// </summary>
 		/// <param name="fileLocation"></param>
 		/// <returns></returns>
-		public static async Task<IList<ItemSet>> GetItemSet(string fileLocation)
+		public static async Task<IList<Item>> GetDataSet(string fileLocation)
 		{
-			List<ItemSet> list = new List<ItemSet>();
+			List<ItemSet> dataSet = new List<ItemSet>();
 			string line = string.Empty;
 			
 			using(TextReader file = File.OpenText(fileLocation))
 		    {        
 		        while((line = await file.ReadLineAsync()) != null)
 		        {
-		        	list.Add(new ItemSet{Item = line});
+		        	dataSet.Add(new ItemSet{Item = line});
 		        }
 		    }
-			return list;
-		}
-		
-		public static async Task<IList<ItemSet>> GetFirstItemSet(IList<ItemSet> itemSet)
-		{
-			List<ItemSet> list = new List<ItemSet>();
-			
-			
-			
-			return list;
+			return dataSet;
 		}
 	}
 }

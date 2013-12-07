@@ -33,6 +33,8 @@
     <Reference Include="NUnit.Framework">
       <HintPath>$(SharpDevelopBinPath)\Tools\NUnit\NUnit.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework" />
+    <Reference Include="nunit.framework" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -44,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AprioriTest.cs" />
+    <Compile Include="DatabaseTest.cs" />
+    <Compile Include="ListTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +55,13 @@
       <Project>{1AF09CBA-6A6D-4020-9BA3-BECF2DFE011C}</Project>
       <Name>ExportExtension</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\input1.txt" />
+    <None Include="data\input2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

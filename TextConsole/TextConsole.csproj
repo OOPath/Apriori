@@ -57,5 +57,11 @@
   <ItemGroup>
     <Folder Include="data" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExportExtension\ExportExtension.csproj">
+      <Project>{1AF09CBA-6A6D-4020-9BA3-BECF2DFE011C}</Project>
+      <Name>ExportExtension</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,17 +20,17 @@ namespace ExportExtension
 	/// </summary>
 	public static class DatabaseExtension
 	{
-		public static void ToTextFile(IList<Item> itemSet, string dbName, string dbPath)
+		public static void ToTextFile(this IList<Item> itemSet, string dbName, string dbPath)
 		{
 			
 		}
 		
-		public static void ToSQLite(IList<Item> itemSet, string dbName, string dbPath) 
+		public static void ToSQLite(this IList<Item> itemSet, string dbName, string dbPath) 
 		{
 			
 		}
 		
-		public static void ToMongoDB(IList<Item> itemSet, string dbName, string connectionString)
+		public static void ToMongoDB(this IList<Item> itemSet, string dbName, string connectionString)
 		{
 			
 		}
