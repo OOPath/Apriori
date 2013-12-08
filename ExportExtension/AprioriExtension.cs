@@ -19,15 +19,37 @@ namespace ExportExtension
 	/// <summary>
 	/// Description of AprioriExtension.
 	/// </summary>
-	public static class AprioriExtension
+	public static partial class AprioriExtension
 	{
+		private IList<Item> firstItemSet;
+		private IList<Item> items;
+		private List<Item> itemSet;
+		
 		public static IList<Item> ToApriori(this IList<Item> items, EnumSource source)
+		{		
+			this.firstItemSet = items.GetFirstItemSet(source);
+			this.itemSet = firstItemSet;
+			this.items = items;
+			this.itemSet = AprioriRecursive(this.itemSet);
+			
+			return this.itemSet;
+		}
+		
+		private static IList<Item> AprioriRecursive(IList<Item> itemSet)
 		{
-			List<Item> itemSet = new List<Item>();
 			
-			var firstItemSet = items.GetFirstItemSet(source);
-			
-			return itemSet;
+					
+			return this.itemSet;
+		}
+		
+		private static int GetDepth(Item parent)
+		{
+			int depth = 1;
+			if (parent != null) {
+				var data = parent.Data.Split(' ');
+				depth += data.Length;
+			}
+			return depth;
 		}
 		
 		public static IList<Item> GetFirstItemSet(this IList<Item> items, EnumSource source)
@@ -44,50 +66,6 @@ namespace ExportExtension
 			}
 		}
 		
-		private static IList<Item> GetIBMFirstItemSet(IList<Item> items)
-		{
-			List<Item> itemSet = new List<Item>();
-			
-			int minimumSupport = items.First().MinimumSupport;
-			
-			
-			return itemSet;
-		}
 		
-		private static IList<Item> GetCharFirstItemSet(IList<Item> items)
-		{
-			List<Item> itemSet = new List<Item>();
-			
-			int minimumSupport = Convert.ToInt32(items.First().Data);
-			string EOF = items.Last().Data;
-//			Console.WriteLine("EOF = {0}", EOF);
-			List<char> chList = new List<char>();
-			foreach (var item in items.Skip(1)) {
-				if (!item.Data.Equals(EOF)) {
-					chList.AddRange(item.Data.ToCharArray());
-				}
-			}
-			var freqItems = 
-				from c in chList
-				group c by c into g
-				let transSupport = g.Count()
-				let data = g.Key.ToString()
-				where transSupport >= minimumSupport
-				orderby data
-				select new Item {
-					Data = data,
-					MinimumSupport = minimumSupport, 
-					TransactionSupport = transSupport};
-			
-//			Console.WriteLine("Freq count = {0}", freqItems.Count());
-			
-			itemSet = freqItems.ToList();
-			
-			if (itemSet.Count == 0) {
-				itemSet.Add(new Item{ Data = EOF });
-			}
-			
-			return itemSet;
-		}
 	}
 }

@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AprioriExtension.cs" />
+    <Compile Include="AprioriMethod.cs" />
     <Compile Include="DatabaseExtension.cs" />
     <Compile Include="EnumSource.cs" />
     <Compile Include="ListExtension.cs" />
