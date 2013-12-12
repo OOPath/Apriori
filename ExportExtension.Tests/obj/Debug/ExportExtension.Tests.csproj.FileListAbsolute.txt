@@ -9,4 +9,5 @@ C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\o
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\obj\Debug\ExportExtension.Tests.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\obj\Debug\ExportExtension.Tests.pdb
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\ExportExtension.pdb
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\NUnit.Framework.dll

@@ -45,17 +45,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ItemSetFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="data\frequent_pair_test1.in.txt" />
-    <None Include="data\frequent_pair_test2.in.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="data" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExportExtension\ExportExtension.csproj">

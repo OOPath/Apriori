@@ -21,16 +21,13 @@ namespace ExportExtension
 	/// </summary>
 	public static partial class AprioriExtension
 	{
-		private static IList<Item> firstItemSet;
-		private static IList<Item> itemSet;
-		
 		public static IList<Item> ToApriori(this IList<Item> items, EnumSource source, int minimumSupport)
 		{		
-			firstItemSet = items.GetFirstItemSet(source, minimumSupport);
-			itemSet = firstItemSet;
+			IList<Item> firstItemSet = items.GetFirstItemSet(source, minimumSupport);
+			IList<Item> itemSet = firstItemSet;
 			
 			#region old
-			bool hasItemSet;
+			bool hasItemSet = false;
 			
 			int count = 1;
 			while (count < firstItemSet.Count) 
@@ -41,29 +38,36 @@ namespace ExportExtension
 //				}
 				var nextItemSet = firstItemSet.Skip(count);
 //				foreach (var w in nextItemSet) {
-//					Console.WriteLine("Word: {0}", w);
+//					Console.WriteLine("Word: {0}", w.Data);
 //				}
 				
-				string beginLambda = "s => ";
+				string beginLambda = string.Empty; // s => 
+				string nextLambda = string.Empty;
 				string extendedLambda = string.Empty;
-				string firstExtendedLambda = beginLambda + string.Format("s.Data.Contains(\"{0}\")", 
-									beginItemSet.Skip(count-1).Take(1).FirstOrDefault());
+				string firstExtendedLambda = beginLambda + string.Format("Data.Contains(\"{0}\")", 
+									beginItemSet.Skip(count-1).Take(1).FirstOrDefault().Data);
+//				Console.WriteLine("firstExtendedLambda: {0}", firstExtendedLambda);
 				
 				int i = 0;
 				foreach (var begin in beginItemSet)
 				{
 					beginLambda += i > 0 ? " && " : string.Empty;
-					beginLambda += string.Format("s.Data.Contains(\"{0}\")", begin.Data);
+					beginLambda += string.Format("Data.Contains(\"{0}\")", begin.Data);
 					i++;
 				}
+//				Console.WriteLine("beginLambda: {0}", beginLambda);
 				
-				foreach (var next in nextItemSet)
+				foreach (var next in nextItemSet.ToList())
 				{
-					extendedLambda = beginLambda + string.Format(" && s.Data.Contains(\"{0}\")", next.Data);
-					var nextLambda = firstExtendedLambda + string.Format(" && s.Data.Contains(\"{0}\")", next.Data);
-		
+					extendedLambda = beginLambda + string.Format(" && Data.Contains(\"{0}\")", next.Data);
+					nextLambda = firstExtendedLambda + string.Format(" && Data.Contains(\"{0}\")", next.Data);
+//					Console.WriteLine("extendedLambda: {0}", extendedLambda);
+//					Console.WriteLine("nextLambda: {0}", nextLambda);
+					
 					next.TransactionSupport = items.AsQueryable().Where(nextLambda).Count();
+//					Console.WriteLine("\n\t transactionSupport: {0}", next.TransactionSupport);
 					hasItemSet = next.TransactionSupport >= minimumSupport;
+//					Console.WriteLine("\n\t hasItemSet: {0}", hasItemSet);
 					if (hasItemSet)
 					{
 						AddFreq(beginItemSet.Skip(count-1).Take(1), next, itemSet);
@@ -79,6 +83,7 @@ namespace ExportExtension
 				}
 				count++;
 			}
+			
 			#endregion
 			
 			return itemSet;
@@ -93,11 +98,14 @@ namespace ExportExtension
 				str += item.Data + " ";
 			}
 			str += next.Data;
-			itemSet.Add(new Item{ 
+			if (!itemSet.Any(x => x.Data.Equals(str))) {
+				itemSet.Add(new Item{ 
 			          	Data = str, 
 			          	TransactionSupport = next.TransactionSupport,
                         MinimumSupport = next.MinimumSupport
 			          });
+			}
+			
 		}
 		#endregion
 		
