@@ -1,13 +1,13 @@
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\ExportExtension.Tests.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\ExportExtension.Tests.pdb
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\ExportExtension.dll
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\NUnit.Framework.dll
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\System.Linq.Dynamic.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\MongoDB.Bson.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\ExportExtension.pdb
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\MongoDB.Bson.xml
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\obj\Debug\ExportExtension.Tests.csprojResolveAssemblyReference.cache
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\obj\Debug\ExportExtension.Tests.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\obj\Debug\ExportExtension.Tests.pdb
-C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\System.Linq.Dynamic.dll
-C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\ExportExtension.pdb
-C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension.Tests\bin\Debug\NUnit.Framework.dll

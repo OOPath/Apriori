@@ -66,7 +66,7 @@ namespace ExportExtension
 					
 					next.TransactionSupport = items.AsQueryable().Where(nextLambda).Count();
 //					Console.WriteLine("\n\t transactionSupport: {0}", next.TransactionSupport);
-					hasItemSet = next.TransactionSupport >= minimumSupport;
+					hasItemSet = next.TransactionSupport >= next.MinimumSupport;
 //					Console.WriteLine("\n\t hasItemSet: {0}", hasItemSet);
 					if (hasItemSet)
 					{
@@ -74,7 +74,7 @@ namespace ExportExtension
 					}
 					
 					next.TransactionSupport = items.AsQueryable().Where(extendedLambda).Count();
-					hasItemSet = next.TransactionSupport >= minimumSupport;
+					hasItemSet = next.TransactionSupport >= next.MinimumSupport;
 					if (hasItemSet)
 					{
 						AddFreq(beginItemSet, next, itemSet);
@@ -84,8 +84,14 @@ namespace ExportExtension
 				count++;
 			}
 			
+			var order = from it in itemSet
+						orderby it.Data.Length, it.Data
+						select it;
+			itemSet = order.ToList();
+//			((List<Item>)itemSet).ForEach(x => Console.WriteLine(x.Data));
+//			Console.ReadLine();
 			#endregion
-			
+
 			return itemSet;
 		}
 		
