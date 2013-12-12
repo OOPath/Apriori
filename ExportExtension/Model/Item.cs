@@ -22,6 +22,6 @@ namespace ExportExtension.Model
 		public int TransactionSupport { get; set; }
 		public string TransactionId { get; set; }
 		public string Data { get; set; }
-		public Item Parent { get; set; }
+		//public Item Parent { get; set; }
 	}
 }

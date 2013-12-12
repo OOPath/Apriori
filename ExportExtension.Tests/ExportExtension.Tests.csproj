@@ -30,11 +30,12 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExportExtension">
+      <HintPath>..\ExportExtension\bin\Debug\ExportExtension.dll</HintPath>
+    </Reference>
     <Reference Include="NUnit.Framework">
       <HintPath>$(SharpDevelopBinPath)\Tools\NUnit\NUnit.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework" />
-    <Reference Include="nunit.framework" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,16 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AprioriTest.cs" />
+    <Compile Include="AprioriExtensionTest.cs" />
     <Compile Include="DatabaseTest.cs" />
     <Compile Include="ListTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ExportExtension\ExportExtension.csproj">
-      <Project>{1AF09CBA-6A6D-4020-9BA3-BECF2DFE011C}</Project>
-      <Name>ExportExtension</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="data\input1.txt" />

@@ -1,7 +1,6 @@
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\obj\Debug\ExportExtension.csprojResolveAssemblyReference.cache
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Debug\ExportExtension.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Debug\ExportExtension.pdb
-C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Debug\LinqHierarchy.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Debug\MongoDB.Bson.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Debug\MongoDB.Driver.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Debug\Newtonsoft.Json.dll
@@ -10,3 +9,4 @@ C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Deb
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Debug\Newtonsoft.Json.xml
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\obj\Debug\ExportExtension.dll
 C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\obj\Debug\ExportExtension.pdb
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\ExportExtension\bin\Debug\System.Linq.Dynamic.dll
