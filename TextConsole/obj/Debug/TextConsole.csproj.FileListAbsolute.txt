@@ -1,0 +1,13 @@
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\obj\Debug\TextConsole.csprojResolveAssemblyReference.cache
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\TextConsole.exe.config
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\TextConsole.exe
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\TextConsole.pdb
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\ExportExtension.dll
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\MongoDB.Bson.dll
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\ExportExtension.pdb
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\MongoDB.Bson.xml
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\obj\Debug\TextConsole.exe
+C:\Users\mzkapoo\Documents\SharpDevelop Projects\Apriori\TextConsole\obj\Debug\TextConsole.pdb
